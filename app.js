@@ -15,12 +15,12 @@
 const Discord = require('discord.js');
 const config = new Discord.Client();
 
-client.on('ready', () => {
+bot.on('ready', () => {
   console.log(`成功登入 ${bot.user.tag}!`);
   bot.user.setActivity("皇家女僕", {type: 'STREAMING'})
 });
 
-client.on('message', msg => {
+bot.on('message', msg => {
   if (msg.content === '嗨') {
     msg.reply('嗨');
   }
