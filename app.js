@@ -1,5 +1,5 @@
 //const Discord = require('discord.js');
-//const client = new Discord.Client();
+//const config = new Discord.Client();
 
 //client.on('ready', () => {
 //   console. log('i am ready');
@@ -13,15 +13,14 @@
 
 //client.login
 const Discord = require('discord.js');
-const config = require("./config.json");
-const bot = new Discord.Client();
+const client = new Discord.Client();
 
-bot.on('ready', () => {
+client.on('ready', () => {
   console.log(`成功登入 ${bot.user.tag}!`);
   bot.user.setActivity("皇家女僕", {type: 'STREAMING'})
 });
 
-bot.on('message', msg => {
+client.on('message', msg => {
   if (msg.content === '嗨') {
     msg.reply('嗨');
   }
