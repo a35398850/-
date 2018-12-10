@@ -13,7 +13,8 @@
 
 //client.login
 const Discord = require('discord.js');
-const config = new Discord.Client();
+const config = require("./config.json");
+const bot = new Discord.Client();
 
 bot.on('ready', () => {
   console.log(`成功登入 ${bot.user.tag}!`);
