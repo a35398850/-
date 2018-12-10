@@ -13,7 +13,7 @@
 
 //client.login
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const config = new Discord.Client();
 
 client.on('ready', () => {
   console.log(`成功登入 ${bot.user.tag}!`);
@@ -553,4 +553,4 @@ bot.on('message', msg => {
   }
 });
 
-bot.login(process.env.BOT_Token);
+bot.login(config.BOT_Token);
